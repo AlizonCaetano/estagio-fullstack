@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-color: #1d1d1d;
+  --light-color: #ffffff;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--bg-color);
+  display: grid;
+  height: 100%;
+  place-content: center;
+}
+body * {
+  font-family: "Poppins", sans-serif;
+}
+
+#app {
+  height: 600px;
+  width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-wrapper {
+  width: 50rem;
+  height: 6rem;
+
+  display: flex;
+}
+
+input#search-input {
+  width: 90%;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.search-wrapper,
+input#search-input {
+  border-radius: 16px;
+  background-color: var(--light-color);
+}
+
+.search-wrapper button {
+  width: 10%;
+  background: none;
+  color: var(--light-color);
+  border-radius: 50%;
+  border: none;
+}
+
+.search-wrapper button span {
+  background: var(--bg-color);
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+
+  display: grid;
+  place-content: center;
+}
+
+.weather-card {
+  color: var(--light-color);
+
+  width: 30rem;
+  height: 45rem;
+  border-radius: 32px;
+
+  background: url(/assets/backgrounds/day.svg) #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.weather-card-main {
+  height: 80%;
+  display: grid;
+  place-content: center;
+
+  text-align: center;
+}
+
+.climate-icon img {
+  min-width: 15rem;
+  transform: scale(1.5);
+}
+
+.weather-card-main .temperature {
+  font-size: 4.4rem;
+  display: flex;
+  justify-content: center;
+
+  color: var(--bg-color);
+}
+
+.weather-card-main .temperature span {
+  font-size: 2rem;
+  padding-top: 10px;
+}
+
+.weather-card-main .climate-name {
+  font-size: 2.2rem;
+  color: var(--bg-color);
+}
+
+.weather-card-footer {
+  height: 20%;
+  border-radius: 0 0 36px 36px;
+
+  color: var(--bg-color);
+  background-color: var(--light-color);
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.wind,
+.air-humidity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wind span div:nth-child(1),
+.air-humidity span div:nth-child(1) {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.wind span div:nth-child(2),
+.air-humidity span div:nth-child(2) {
+  font-size: 1.2rem;
+}
